@@ -1,12 +1,12 @@
 CC=gcc
-CFLAGS=-std=c99 -pipe -pedantic-errors -Wall -Werror -Wextra -Wcast-align -O2
-LDFLAGS=-lsystemd
+CFLAGS=-pipe -pedantic-errors -Wall -Wextra -Wcast-align -O2
+LDFLAGS=$(pkg-config --cflags --libs libnotify libsystemd)
 BIN=rlockd
-SOURCE=rlock.c
+SOURCE=rlockd.c
 all: main
 	
-main: rlockd.c
+main: $(SOURCE)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $(BIN) $(SOURCE)
 
-clean: hue
+clean: $(BIN)
 	rm $(BIN)
