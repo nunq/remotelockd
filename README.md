@@ -14,6 +14,7 @@ remotely suspend your pc. uses one-time tokens for authenticating requests.
 
 ### on mobile
 > in termux
+* adjust `IP` and `PORT` in `suspendpc.sh`
 * `./suspendpc.sh <TOKEN>`
 
 ## other
