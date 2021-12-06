@@ -1,6 +1,8 @@
 # remotelockd
 remotely suspend your pc. uses one-time tokens for authenticating requests.
 
+the security of this is pathetic don't use it.
+
 > depends: libnotify, systemd
 
 ## how to
@@ -19,7 +21,7 @@ remotely suspend your pc. uses one-time tokens for authenticating requests.
 
 ## other
 * the generated tokens are numeric, they can be brute-forced
-* i'd advise against running this on anything other than your local home network
+* i'd advise against running this on anything other than your (trusted) local home network
 * license: gpl3
 
 > beware, valgrind reports some memory leaks
